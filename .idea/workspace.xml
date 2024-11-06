@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dd0a8a4-7acf-4e2f-98a1-0e2fd2f49808" name="Changes" comment="" />
+    <list default="true" id="3dd0a8a4-7acf-4e2f-98a1-0e2fd2f49808" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/housing-projects/Project3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/housing-projects/project1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/housing-projects/project2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nrepl-port" beforeDir="false" afterPath="$PROJECT_DIR$/.nrepl-port" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wiring_calculator.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/wiring_calculator.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/wiring-material-calculator/wiring-material-calculator/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/wiring-material-calculator/wiring-material-calculator/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/repl-port" beforeDir="false" afterPath="$PROJECT_DIR$/target/repl-port" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +29,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oTXUqKljtoak0raSQx2XjSb1dD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,12 +44,14 @@
   "keyToString": {
     "Clojure REPL.REPL for wiring-material-calculator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cursive.last.file.extension.C\\:/Users/PC/Documents/alati-metode-fajlovi/wiring-material-calculator/src": "clj",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/PC/Documents/alati-metode-fajlovi/wiring-material-calculator"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1730894709026">{:repl-history {:ide [], :local [{:command &quot;(println \&quot;Hello world!\&quot;)&quot;, :offset 24, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1730931687343">{:repl-history {:ide [], :local [{:command &quot;(println \&quot;Hello world!\&quot;)&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(slurp \&quot;housing-projects/project1.txt\&quot;)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(load-file \&quot;housing-projects/project1.txt\&quot;)4&quot;, :offset 44, :ns &quot;user&quot;} {:command &quot;(clojure.string/replace (load-file \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot; )&quot;, :offset 77, :ns &quot;user&quot;} {:command &quot;(load-file \&quot;housing-projects/project1.txt\&quot;)&quot;, :offset 43, :ns &quot;user&quot;} {:command &quot;(clojure.string/replace (slurp \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot; )&quot;, :offset 73, :ns &quot;user&quot;} {:command &quot;(clojure.string/replace (clojure.string/replace (slurp \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot; ) \&quot;\\\&quot;\&quot; \&quot;\&quot;)&quot;, :offset 106, :ns &quot;user&quot;} {:command &quot;(clojure.string/replace (clojure.string/replace (slurp \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot; ) #(\&quot;\\\&quot;\&quot;) \&quot;\&quot;)&quot;, :offset 109, :ns &quot;user&quot;} {:command &quot;(clojure.string/replace (clojure.string/replace (slurp \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot; ) #\&quot;\\\&quot;\&quot; \&quot;\&quot;)&quot;, :offset 107, :ns &quot;user&quot;} {:command &quot;(defn load-file [filepath]\n  ( (slurp filepath)\n      (clojure.string/replace \&quot;\\r\&quot; \&quot;\&quot;)\n      (clojure.string/replace \&quot;\\\&quot;\&quot; \&quot;\&quot;)))&quot;, :offset 127, :ns &quot;user&quot;} {:command &quot;(defn load-project [filepath]\n  ( (slurp filepath)\n      (clojure.string/replace \&quot;\\r\&quot; \&quot;\&quot;)\n      (clojure.string/replace \&quot;\\\&quot;\&quot; \&quot;\&quot;)))&quot;, :offset 130, :ns &quot;user&quot;} {:command &quot;(load-project \&quot;project1.txt\&quot;)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(defn load-project [filepath]\n  (clojure.string/replace (slurp \&quot;housing-projects/project1.txt\&quot;) \&quot;\\r\&quot; \&quot;\&quot;))&quot;, :offset 105, :ns &quot;user&quot;} {:command &quot;(load-project \&quot;housing-projects/project1.txt\&quot;)&quot;, :offset 46, :ns &quot;user&quot;} {:command &quot;(file-seq \&quot;housing-projects\&quot;)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))&quot;, :offset 52, :ns &quot;user&quot;} {:command &quot;(map #(.getPath %)\n     (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;)))&quot;, :offset 77, :ns &quot;user&quot;} {:command &quot;(rest (map #(clojure.string/replace-first (.getPath %) #\&quot;^housing-projects/\&quot; \&quot;\&quot;)\n          (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;)) ))&quot;, :offset 146, :ns &quot;user&quot;} {:command &quot;(rest (map #(.getPath %)\n     (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))&quot;, :offset 84, :ns &quot;user&quot;} {:command &quot;(rest (map clojure.string/replace-first #(.getPath %) \&quot;housing-projects\\\\\&quot; \&quot;\&quot;\n     (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))&quot;, :offset 137, :ns &quot;user&quot;} {:command &quot;(rest (map clojure.string/replace-first #(.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;\n     (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))&quot;, :offset 139, :ns &quot;user&quot;} {:command &quot;(rest (map #(clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;)\n          (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;)) ))&quot;, :offset 147, :ns &quot;user&quot;} {:command &quot;(rest (map #(clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;)\n          (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))&quot;, :offset 146, :ns &quot;user&quot;} {:command &quot;(defn load-existing-project-names [] (rest (map #(clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;)\n                                                (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;)))))&quot;, :offset 222, :ns &quot;user&quot;} {:command &quot;load-existing-project-names&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(defn get-input\n  ([] (get-input \&quot;\&quot;))\n  ([default]\n   (let [input (clojure.string/trim (read-line))]\n     (if (empty? input)\n       default\n       (clojure.string/lower-case input)))))&quot;, :offset 184, :ns &quot;user&quot;} {:command &quot;(-main)&quot;, :offset 7, :ns &quot;user&quot;} {:command &quot;(main)&quot;, :offset 6, :ns &quot;user&quot;} {:command &quot;(get-input)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(load-existing-project-names)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(defn print-collection [collection]\n  ((doseq [item collection]\n     (println item))))&quot;, :offset 86, :ns &quot;user&quot;} {:command &quot;(defn load-existing-project-names []\n  (seq (rest (map #(clojure.string/lower-case\n                     (clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;))\n                  (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))))&quot;, :offset 249, :ns &quot;user&quot;} {:command &quot;(defn load-existing-project-names []\n  (list (rest (map #(clojure.string/lower-case\n                      (clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;))\n                   (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;))))))&quot;, :offset 252, :ns &quot;user&quot;} {:command &quot;(defn load-existing-project-names []\n  (rest (map #(clojure.string/lower-case\n                (clojure.string/replace-first (.getPath %) #\&quot;^housing-projects\\\\\&quot; \&quot;\&quot;))\n             (file-seq (clojure.java.io/file \&quot;housing-projects\&quot;)))))&quot;, :offset 233, :ns &quot;user&quot;} {:command &quot;(type (load-existing-project-names))&quot;, :offset 36, :ns &quot;user&quot;} {:command &quot;(doseq [name (load-existing-project-names)]\n  (println name))&quot;, :offset 61, :ns &quot;user&quot;} {:command &quot;(defn print-collection [collection]\n  (doseq [name (load-existing-project-names)]\n    (when name\n      (println name))))&quot;, :offset 120, :ns &quot;user&quot;} {:command &quot;(print-collection load-existing-project-names)&quot;, :offset 46, :ns &quot;user&quot;}], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -55,6 +75,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
