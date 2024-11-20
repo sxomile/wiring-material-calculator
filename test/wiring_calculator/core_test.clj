@@ -15,18 +15,29 @@
 (facts "count-lightbulbs-p3" (count-bulbs (slurp (str "housing-projects/" "project3.txt"))) => 0)
 
 ;material pricing tests
-;false material input
+;false material input (type map)
 (facts "calculate-material-price-test1" (calculate-material-price :bulb "led" 5) => "The passed material doesn't exist. Try another input")
 
 ;!!!!!!!!!!!!!!!!!!!!!!
 (facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed type doesn't exist. Try another input")
-
 ;would be better if it wasn't case sensitive, something to keep an eye for
-;checking case price 0 for single map
-(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "LED" 0) => 0)
 
-;'normal' case
-(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "LED" 6) => 42)
+;false material type input (type vector)
+(facts "calculate-material-price-test3" (calculate-material-price :cable "single" 5) => "The passed type doesn't exist. Try another input")
+
+;checking case price 0 for single map
+(facts "calculate-material-price-test4" (calculate-material-price :lightbulb "LED" 0) => 0)
+
+;'normal' case for map
+(facts "calculate-material-price-test5" (calculate-material-price :lightbulb "LED" 6) => 42)
+
+;case price 0 for vector
+(facts "calculate-material-price-test6" (calculate-material-price :cable "3x2.5" 0) => 0)
+;failing because it is returning 0.0
+
+;'normal' vector case
+(facts "calculate-material-price-test7" (calculate-material-price :cable "3x2.5" 5) => 6)
+;failing because the result is 6.0
 
 
 
