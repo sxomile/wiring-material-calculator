@@ -4,14 +4,19 @@
             [wiring-calculator.core :refer :all]))
 
 ;user wants to see available projects to check the layout of the construction site (apartment/warehouse etc.)
-
+;only 3 projects will be used in early development
 (facts "load-project-names-test" (load-existing-project-names) => '("project1.txt" "project2.txt" "project3.txt"))
 
+;lightbulb tests
 (facts "count-lightbulbs-p1" (count-bulbs (slurp (str "housing-projects/" "project1.txt"))) => 2)
 
 (facts "count-lightbulbs-p2" (count-bulbs (slurp (str "housing-projects/" "project2.txt"))) => 0)
 
 (facts "count-lightbulbs-p3" (count-bulbs (slurp (str "housing-projects/" "project3.txt"))) => 0)
+
+
+
+
 
 
 

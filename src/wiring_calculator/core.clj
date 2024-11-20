@@ -19,6 +19,31 @@
 (defn count-bulbs [project]
   (count (filter #(= % \x) project)))
 
+;calculates price of distinct material type
+;quantity of cables is measured in meters
+;other material is measured in pieces
+(defn calculate-material-price [material type quantity]
+  (let [material-data (get materials material)]
+    (cond
+      (nil? material-data)
+      "The passed material doesn't exist. Try another input"
+
+      ;some of the material is given in map because of multiple different types
+      ;it is possible that in future development everything becomes map,
+      ;but it is uncertain at this point
+      (map? material-data)
+      (if (= type (:type material-data))
+        (* (:price material-data) quantity)
+        "The passed type doesn't exist. Try another input")
+
+      ;materials that currently have only one kind are in form of vectors
+      (vector? material-data)
+      (let [item (some #(when (= type (:type %)) %) material-data)]
+        (if item
+          (* (:price item) quantity)
+          "The passed type doesn't exist. Try another input")))))
+
+
 ;retrieves user's input, multi-purpose
 (defn get-input
   "Function definition taken from book Clojure for true and brave, returns lowered user input"
