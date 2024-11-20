@@ -18,8 +18,15 @@
 ;false material input
 (facts "calculate-material-price-test1" (calculate-material-price :bulb "led" 5) => "The passed material doesn't exist. Try another input")
 
-(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed material doesn't exist. Try another input")
+;!!!!!!!!!!!!!!!!!!!!!!
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed type doesn't exist. Try another input")
 
+;would be better if it wasn't case sensitive, something to keep an eye for
+;checking case price 0 for single map
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "LED" 0) => 0)
+
+;'normal' case
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "LED" 6) => 42)
 
 
 
