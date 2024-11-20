@@ -32,12 +32,10 @@
 (facts "calculate-material-price-test5" (calculate-material-price :lightbulb "LED" 6) => 42)
 
 ;case price 0 for vector
-(facts "calculate-material-price-test6" (calculate-material-price :cable "3x2.5" 0) => 0)
-;failing because it is returning 0.0
+(facts "calculate-material-price-test6" (calculate-material-price :cable "3x2.5" 0) => 0.0)
 
 ;'normal' vector case
-(facts "calculate-material-price-test7" (calculate-material-price :cable "3x2.5" 5) => 6)
-;failing because the result is 6.0
+(facts "calculate-material-price-test7" (calculate-material-price :cable "3x2.5" 5) => 6.0)
 
 
 
