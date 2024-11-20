@@ -1,7 +1,18 @@
 (ns wiring-calculator.core
   (:import (java.io FileNotFoundException)))
 
-
+;defining basic material (lightbulb, switch, socket, fuse box, cables)
+;price in USD
+;cable price defined per meter of length, other material defined by single piece
+(def materials
+  {:socket {:price 1, :type "single-phase"}
+   :cable  {:price 1, :type "3x1.5"}
+   :cable  {:price 1.2, :type "3x2.5"}
+   :cable  {:price 3, :type "5x4"}
+   :switch {:price 2, :type "mono pole"}
+   :switch {:price 2, :type "toggle"}
+   :switch {:price 2, :type "cross"}
+   :fuse-box {:price 6, :type "on wall 230.5 x 175.5 x 99.5"}})
 
 ;retrieves user's input, multiple purposes
 (defn get-input
@@ -14,6 +25,7 @@
        (clojure.string/lower-case input)))))
 
 ;loads housing project from txt file
+;user wants to load the project so he can have insight in how the recommended material fits into site
 (defn load-project [filename]
   (try
     (clojure.string/replace
