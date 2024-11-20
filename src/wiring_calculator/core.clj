@@ -1,6 +1,9 @@
 (ns wiring-calculator.core
   (:import (java.io FileNotFoundException)))
 
+
+
+;retrieves user's input, multiple purposes
 (defn get-input
   "Function definition taken from book Clojure for true and brave, returns lowered user input"
   ([] (get-input ""))
@@ -10,6 +13,7 @@
        default
        (clojure.string/lower-case input)))))
 
+;loads housing project from txt file
 (defn load-project [filename]
   (try
     (clojure.string/replace
@@ -24,17 +28,20 @@
     (catch Exception e
       (str "An error occurred: " (.getMessage e)))))
 
+;loads names of projects from directory
 (defn load-existing-project-names []
   (rest (map #(clojure.string/lower-case
                 (clojure.string/replace-first (.getPath %)
                                               #"^housing-projects\\" ""))
              (file-seq (clojure.java.io/file "housing-projects")))))
 
+;prints project names, important for user interaction
 (defn print-collection-of-projects [collection]
   (doseq [name (collection)]
     (when name
       (println name))))
 
+;restarts prompt if user wants to keep working
 (defn prompt-restart []
   (loop []
     (println "\nWould you like to load another project? (y-yes, n-no)")

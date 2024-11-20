@@ -2,5 +2,4 @@
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [midje "1.10.9"]]
   :plugins [[lein-midje "3.2.1"]]
-  :main ^:skip-aot wiring-calculator.core
-)
+  :main ^:skip-aot wiring-calculator.core)
