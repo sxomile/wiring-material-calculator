@@ -15,6 +15,7 @@
                {:price 2, :type "cross"}]
    :fuse-box  {:price 6, :type "on wall 230.5 x 175.5 x 99.5"}})
 
+;User wants to know the number of bulbs so he can calculate total price
 (defn count-bulbs [project]
   (count (filter #(= % \x) project)))
 
