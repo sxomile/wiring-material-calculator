@@ -14,6 +14,11 @@
 
 (facts "count-lightbulbs-p3" (count-bulbs (slurp (str "housing-projects/" "project3.txt"))) => 0)
 
+;material pricing tests
+;false material input
+(facts "calculate-material-price-test1" (calculate-material-price :bulb "led" 5) => "The passed material doesn't exist. Try another input")
+
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed material doesn't exist. Try another input")
 
 
 

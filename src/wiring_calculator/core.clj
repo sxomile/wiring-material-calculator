@@ -28,21 +28,19 @@
       (nil? material-data)
       "The passed material doesn't exist. Try another input"
 
-      ;some of the material is given in map because of multiple different types
-      ;it is possible that in future development everything becomes map,
-      ;but it is uncertain at this point
+      ;CORRECTED EXPLANATION:
+      ;EVERY single material is defined as a map
       (map? material-data)
       (if (= type (:type material-data))
         (* (:price material-data) quantity)
         "The passed type doesn't exist. Try another input")
 
-      ;materials that currently have only one kind are in form of vectors
+      ;materials that have multiple kinds are in form of vectors of maps
       (vector? material-data)
       (let [item (some #(when (= type (:type %)) %) material-data)]
         (if item
           (* (:price item) quantity)
           "The passed type doesn't exist. Try another input")))))
-
 
 ;retrieves user's input, multi-purpose
 (defn get-input
