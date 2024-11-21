@@ -19,6 +19,11 @@
 (defn count-bulbs [project]
   (count (filter #(= % \x) project)))
 
+;User needs number of switches to calculate the price
+;Will be modified, currently only assuming mono pole switches
+(defn count-switches [project]
+  (count (filter #(= % \/) project)))
+
 ;calculates price of distinct material type
 ;quantity of cables is measured in meters
 ;other material is measured in pieces

@@ -37,6 +37,11 @@
 ;'normal' vector case
 (facts "calculate-material-price-test7" (calculate-material-price :cable "3x2.5" 5) => 6.0)
 
+;counting switches in project1
+(facts "count-switches-test-1" (count-switches (slurp (str "housing-projects/" "project1.txt"))) => 2)
+
+;counting switches in empty project (project 3)
+(facts "count-switches-test-2" (count-switches (slurp (str "housing-projects/" "project3.txt"))) => 0)
 
 
 
