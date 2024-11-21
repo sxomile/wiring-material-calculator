@@ -36,13 +36,14 @@
       ;CORRECTED EXPLANATION:
       ;EVERY single material is defined as a map
       (map? material-data)
-      (if (= type (:type material-data))
+      (if (= (clojure.string/lower-case type) ((clojure.string/lower-case :type) material-data))
         (* (:price material-data) quantity)
         "The passed type doesn't exist. Try another input")
 
       ;materials that have multiple kinds are in form of vectors of maps
       (vector? material-data)
-      (let [item (some #(when (= type (:type %)) %) material-data)]
+      (let [item (some #(when (= (clojure.string/lower-case type) ((clojure.string/lower-case :type) %)) %) material-data)]
+        ;this caused exceptions, so it needs to be fixed
         (if item
           (* (:price item) quantity)
           "The passed type doesn't exist. Try another input")))))
