@@ -36,8 +36,8 @@
       ;CORRECTED EXPLANATION:
       ;EVERY single material is defined as a map
       (map? material-data)
-      (if (= (clojure.string/lower-case type) ((clojure.string/lower-case (get material-data :type "")))
-        (* (:price material-data) quantity))
+      (if (= (clojure.string/lower-case type) (clojure.string/lower-case (get material-data :type "")))
+        (* (:price material-data) quantity)
         "The passed type doesn't exist. Try another input")
 
       ;materials that have multiple kinds are in form of vectors of maps
@@ -46,7 +46,7 @@
                                  (clojure.string/lower-case (get % :type ""))) %) material-data)]
         ;the issue was that i was trying to lower :type directly, and not the value inside of it
         ;now i am using get to access that value
-        ;seems better now, but tests are still failing (2 more than supposed)
+        ;fixed, problem with maps wasn't the logic, but the bracket order which got mixed up at some point
         (if item
           (* (:price item) quantity)
           "The passed type doesn't exist. Try another input")))))
