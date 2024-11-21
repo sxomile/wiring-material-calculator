@@ -19,8 +19,9 @@
 (facts "calculate-material-price-test1" (calculate-material-price :bulb "led" 5) => "The passed material doesn't exist. Try another input")
 
 (facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed type doesn't exist. Try another input")
-;this test is supposed to fail now, which is true,
-;but now 5 more tests fail
+;this test is supposed to fail now, which is true
+;now 2 tests more are failing (calculate-material-price-test4 and calculate-material-price-test5)
+;that means there is probably some problem with how i access maps, since these 2 tests are used for that
 
 ;false material type input (type vector)
 (facts "calculate-material-price-test3" (calculate-material-price :cable "single" 5) => "The passed type doesn't exist. Try another input")
