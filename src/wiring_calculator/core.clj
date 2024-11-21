@@ -5,15 +5,15 @@
 ;price in USD
 ;cable price defined per meter of length, other material defined by single piece
 (def materials
-  {:lightbulb {:price 7, :type "LED"}
-   :socket    {:price 1, :type "single-phase"}
-   :cable     [{:price 1, :type "3x1.5"}
-               {:price 1.2, :type "3x2.5"}
-               {:price 3, :type "5x4"}]
-   :switch    [{:price 2, :type "mono pole"}
-               {:price 2, :type "toggle"}
-               {:price 2, :type "cross"}]
-   :fuse-box  {:price 6, :type "on wall 230.5 x 175.5 x 99.5"}})
+  {:lightbulb {:price 7 :type "LED"}
+   :socket    {:price 1 :type "single-phase"}
+   :cable     [{:price 1 :type "3x1.5"}
+               {:price 1.2 :type "3x2.5"}
+               {:price 3 :type "5x4"}]
+   :switch    [{:price 2 :type "mono pole"}
+               {:price 2 :type "toggle"}
+               {:price 2 :type "cross"}]
+   :fuse-box  {:price 6 :type "on wall 230.5 x 175.5 x 99.5"}})
 
 ;User wants to know the number of bulbs so he can calculate total price
 (defn count-bulbs [project]
@@ -49,7 +49,7 @@
 
 ;retrieves user's input, multi-purpose
 (defn get-input
-  "Function definition taken from book Clojure for true and brave, returns lowered user input"
+  "Function implementation taken from book Clojure for true and brave, returns lowered user input"
   ([] (get-input ""))
   ([default]
    (let [input (clojure.string/trim (read-line))]
