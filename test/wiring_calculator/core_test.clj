@@ -18,8 +18,9 @@
 ;false material input (type map)
 (facts "calculate-material-price-test1" (calculate-material-price :bulb "led" 5) => "The passed material doesn't exist. Try another input")
 
-(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "led" 5) => "The passed type doesn't exist. Try another input")
-;this test is supposed to fail now, which is true
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "lEd" 5) => 35)
+
+(facts "calculate-material-price-test2" (calculate-material-price :lightbulb "nice" 5) => "The passed type doesn't exist. Try another input")
 
 ;false material type input (type vector)
 (facts "calculate-material-price-test3" (calculate-material-price :cable "single" 5) => "The passed type doesn't exist. Try another input")
